@@ -1,0 +1,51 @@
+﻿{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.12",
+  "version": "1.0.0",
+  "id": "c93e9fed-101d-4072-ade0-972eabd97f37",
+  "packageName": "com.contoso.teamsauthsso",
+  "developer": {
+    "name": "Microsoft",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.microsoft.com/privacy",
+    "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+  },
+  "name": {
+    "short": "Teams Auth SSO",
+    "full": "Teams Auth SSO"
+  },
+  "description": {
+    "short": "Teams Auth SSO app",
+    "full": "The Teams Auth SSO app"
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#60A18E",
+  "staticTabs": [
+    {
+      "entityId": "auth",
+      "name": "Auth",
+      "contentUrl": "https://teamstabssows.azurewebsites.net/Home/Index",
+      "scopes": [ "personal" ]
+    }
+  ],
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://teamstabssows.azurewebsites.net/Home/Configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "team"
+      ]
+    }
+  ],
+  "permissions": [ "identity", "messageTeamMembers" ],
+  "validDomains": [
+    "https://teamstabssows.azurewebsites.net"
+  ],
+  "webApplicationInfo": {
+    "id": "c93e9fed-101d-4072-ade0-972eabd97f37",
+    "resource": "api://wilsonsantosnetgmail.onmicrosoft.com/c93e9fed-101d-4072-ade0-972eabd97f37"
+  }
+}
